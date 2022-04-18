@@ -1,0 +1,37 @@
+-----------------CRIAÇÃO DE BANCO DE DADOS-----------------
+
+CREATE DATABASE "nome_banco";
+USE "nome_banco";
+
+-----------------CRIAÇÃO DE TABELAS-----------------
+
+CREATE TABLE "nome_tabela"(
+    "coluna1" "tipo",
+    "coluna2" "tipo",
+    "coluna3" "tipo"
+)
+
+-----------------INSERINDO VALORES NAS TABELAS-----------------
+
+INSERT INTO "tabela"
+VALUES
+    ("valor_coluna1", "valor_coluna2", "valor_coluna3" ),
+    ("valor_coluna1", "valor_coluna2", "valor_coluna3" ),
+    ("valor_coluna1", "valor_coluna2", "valor_coluna3" );
+
+-----------------ATUALIZANDO DADOS NAS TABELAS-----------------
+
+UPDATE "tabela"
+SET "coluna" = "valor_novo"
+WHERE "coluna_id" = "id_linha";
+
+-----------------EXCLUINDO LINHAS NAS TABELAS-----------------
+
+DELETE FROM "tabela"
+WHERE "coluna_id" = "id_linha";
+
+-----------------EXCLUINDO TABELAS E BANCOS-----------------
+
+DROP TABLE "tabela";
+
+DROP DATABASE "banco";

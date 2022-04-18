@@ -1,0 +1,42 @@
+O QUE SÃO BANCOS DE DADOS?
+Os dados estão ao nosso redor, em computadores, celulares ou agendas, durante muito tempo esses dados eram armazenados em cadernos, folhas, arquivos de aço.
+Se as informações não fossem bem organizadas, causariam uma perda de tempo imensa.
+Com o surgimento dos computadores, esses dados começaram a ser armazenados dentro dos mesmos, nos bancos de dados.
+O SQL é uma linguagem, que é utilizado para acessar as informações dos bancos de dados dentro dos computadores.
+
+O QUE É O SQL?
+SQL é uma linguagem composta por uma série de comandos, que foi criada para permitir que a gente disse pro computador a forma como a gente gostaria de manipular e acessar os dados dentro de um banco de dados, SQL é uma linguagem padrão para trabalhar com  banco de dados.
+
+COMO FUNCIONA?
+Exemplo: voce tem um analista de uma empresa e quer saber quais clientes sao do estado de sao paulo na sua empresa, para isso é usado o SQL com uma serie de comandos para pedir os dados.
+SELECT Nome, Sobrenome, estado
+FROM clientes
+WHERE Estado = "São Paulo"
+
+Exemplo: voce deve criar uma nova tabela em um banco de dados com informações de funcionarios
+CREATE TABLE funcionario(
+    ID INT,
+    Nome VARCHAR(100)
+)
+
+ONDE USAR SQL?
+Existem programas especiais, que permitem o acesso, criação e manipulação de bancos de dados, esses programas são chamados de Sistemas de Gerenciamento de Bancos de Dados (SGBD)
+
+Exemplo: PostgreSQL, Oracle, MYSQL, SQLite, SQL Server.
+
+POR QUE APRENDER SQL?
+1. Com todo o volume de dados que as empresas precisam lidar, SQL é o futuro.
+2. Todo esse volume de dados precisa ser armazenado de forma segura e só os bancos de dados proporcionam isso.
+3. Linguagem padrão para trabalhar com banco de dados.
+4. Utilizado em diferentes áreas do mercado.
+5. Qualquer empresa precisa lidar com dados, pequenas, médias ou grandes.
+6. Existe uma variedade de tipos profissionais que trabalham com dados e SQL.
+7. Sua empresa usa SQL e Banco de Dados (ou vai precisar começar a usar) e você nem sabe disso...
+
+NÃO POSSO USAR EXCEL? POWER BI? PHYTON?
+Não! essas alternativas são coisas completamente diferentes, 
+
+SQL vs Excel: Excel é um nivel muito menor de armazenamentos de dados com menor segurança.
+SQL vs Power BI: Power integra-se com banco de dados, pois ele precisa dos dados para funcionar.
+SQL vs Phyton: Phyton é uma linguagem de programação, automação de tarefa, dentre outras coisas.
+

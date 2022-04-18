@@ -1,0 +1,85 @@
+-----------------COMANDOS DE SELEÇÃO-----------------
+
+SELECT * FROM "tabela"
+
+seleciona tudo de tal tabela
+
+SELECT "coluna", "outracoluna" FROM "tabela"
+
+SELECT "coluna" AS "nome_transformado" FROM "tabela"
+
+seleciona a coluna escolhida e muda o nome dela
+
+SELECT * FROM "tabela"
+LIMIT "quantidade_de_colunas"
+
+seleciona as n primeiras linhas de uma determinada tabela
+
+SELECT DISTINCT "coluna" FROM "tabela"
+
+seleciona valores distintos de uma coluna
+
+-----------------COMANDOS DE ORDENAÇÃO-----------------
+
+SELECT * FROM "tabela"
+ORDER BY "coluna" ASC
+
+organiza os valores de ordem crescente
+
+SELECT * FROM "tabela"
+ORDER BY "coluna" DESC
+
+organiza os valores de ordem decrescente
+
+-----------------COMANDOS DE FILTRAGEM-----------------
+
+SELECT * FROM "tabela"
+WHERE "coluna" = "texto_procurado"
+
+organiza os valores pegando o texto ou numero coincidente que você procura em tal coluna
+
+SELECT * FROM "tabela"
+WHERE "coluna" = "valor_procurado" AND "coluna" = "valor_procurado"
+
+pesquisa os valores fazendo uma requisição e pegando informações de mais que uma coluna
+
+SELECT * FROM "tabela"
+WHERE "coluna" = "valor_procurado" OR "mesma_coluna" = "outro_valor_procurado"
+
+esse comando mostra mais do que um valor de apenas uma coluna
+
+SELECT * FROM "tabela"
+WHERE "coluna" IN ("1_valor_procurado", "2_valor_procurado", "3_valor_procurado")
+
+esse comando mostra todos que valores de uma coluna que estão dentro de IN
+
+SELECT * FROM "tabela"
+WHERE "coluna" BETWEEN "valor" AND "valor"
+
+esse comando pega todas as informações da coluna que estão ENTRE os valores selecionados
+
+-----------------COMANDOS MATEMÁTICOS-----------------
+
+SELECT COUNT("coluna") FROM "tabela"
+
+esse comando retorna o total de valores de uma coluna, ignorando valores nulos
+
+SELECT COUNT(*) FROM "tabela"
+
+esse comando retorna quantas linhas tem na tabela
+
+SELECT COUNT(DISTINCT "coluna") FROM "tabela"
+
+esse comando retorna quantos valores diferentes tem na coluna 
+
+SELECT SUM("coluna") FROM "tabela"
+
+esse comando soma os valores da coluna escolhida
+
+SELECT AVG("coluna") FROM "tabela"
+
+esse comando realiza a media do valor da coluna escolhida
+
+SELECT MAX("coluna") FROM "tabela"
+
+esse comando retorna qual o valor máximo de uma coluna

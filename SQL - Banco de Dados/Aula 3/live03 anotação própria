@@ -1,0 +1,89 @@
+-----------------CRIANDO AGRUPAMENTOS-----------------
+
+SELECT 
+    "coluna", 
+    COUNT(*)
+FROM "tabela"
+GROUP BY "coluna";
+
+esse código agrupa as informações por coluna e conta quantos filmes tem em cada coluna
+
+SELECT
+    "coluna1",
+    COUNT(*)
+FROM "tabela"
+WHERE "coluna2" = "valor_pesquisado"
+GROUP BY "coluna1";
+
+esse código está criando uma consulta para descobrir quantos itens presentes na coluna um estão dentro das condições passadas por WHERE
+
+SELECT 
+    "coluna1",
+    COUNT(*) AS "nome_nova_coluna"
+FROM "tabela"
+GROUP BY "coluna1"
+HAVING "coluna2" >= "valor_pesquisado";
+
+esse código mostra apenas a informações da coluna (feita pelo count) que estão dentro do requerimento
+
+-----------------RELACIONANDO TABELAS-----------------
+
+SELECT 
+    *
+FROM "tabela1"
+LEFT JOIN "tabela2"
+ON "tabela1.coluna_comum" = "tabela2.coluna_comum";
+
+esse código faz a junção das duas tabelas, ON é onde colocamos a coluna que as duas tabelas tem em comum
+
+SELECT 
+    "tabela1.coluna1",
+    "tabela1.coluna2",
+    "tabela2.coluna1"
+FROM "tabela1"
+LEFT JOIN "tabela2"
+ON "tabela1.coluna_comum" = "tabela2.coluna_comum";
+
+esse código relaciona as duas tabelas mas mostra somente as colunas escolhidas
+
+SELECT
+    "tabela1.*",
+    "tabela2.coluna1",
+    "tabela2.coluna2",
+    "tabela3.coluna1"
+FROM "tabela1"
+LEFT JOIN "tabela2"
+ON "tabela1.coluna_comum" = "tabela2.coluna_comum"
+LEFT JOIN "tabela3"
+ON "tabela1.coluna_comum" = "tabela3.coluna_comum"
+
+esse código relaciona 3 tabelas e mostra as colunas escolhidas
+
+-----------------SELECT DENTRO DE SELECT-----------------
+
+SELECT
+    "tabela1.coluna1"
+    AVG("tabela2.coluna1") AS "nome_transformado"
+FROM "tabela2"
+LEFT JOIN "tabela1"
+ON "tabela2.coluna_comum" = "tabela1.coluna_comum"
+GROUP BY "tabela1.coluna1"
+HAVING "nome_transformado" = SELECT AVG(coluna1 FROM "tabela2");
+
+esse código faz um SELECT dentro de um SELECT, assim não colocando um valor que poderá mudar pós um determinado tempo, ou seja, toda vez que for executado, ele irá atualizar seus valores e realizar a conta novamente
+
+-----------------CREATE/DROP VIEW-----------------
+
+CREATE VIEW "nome_do_view" AS
+SELECT 
+    "coluna1"
+    COUNT(*) AS "nome_transformado1"
+    AVG("coluna2") AS "nome_transformado2"
+    SUM("coluna3") AS "nome_transformado3"
+FROM "tabela1"
+LEFT JOIN "tabela2"
+ON "tabela1.coluna_comum" = "tabela2.coluna_comum"
+GROUP BY "coluna1"
+ORDER BY "nome_transformado1" DESC;
+
+esse código cria um VIEW, que seria como uma forma de salva-lo por um nome assim executando-o depois somente inserindo seu nome com SELECT
