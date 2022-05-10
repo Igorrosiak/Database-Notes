@@ -122,5 +122,32 @@
 -- WHERE "idaluno" = 10
 
 -- 24.
-UPDATE aluno
+-- UPDATE aluno
+-- SET "idade" = 21
+-- WHERE "nome" = 'Tadeu' OR "nome" = 'Cesar' OR "nome" = 'Marisa' 
 
+-- 25.
+-- UPDATE aluno
+-- SET "nome" = 'Luiz', "idade" = 22, "genero" = 'M', "cidade" = 'TIJUCAS'
+-- WHERE "idaluno" = 10
+
+-- 26.
+-- UPDATE aluno
+-- SET "cidade" = null
+-- WHERE "idade" > 21
+
+-- 27.
+-- DELETE FROM aluno
+-- WHERE "cidade" = null OR "cidade" = '' OR "cidade" = NULL
+
+-- 28.
+-- DELETE FROM aluno
+-- WHERE "cidade" = 'TUBARÃO' AND "idade" > 15
+
+-- 29.
+-- DELETE FROM aluno
+-- WHERE "nome" = 'Tadeu' OR "nome" = 'Alice' OR "nome" = 'Maria' AND "idade" = 19
+
+-- 30.
+-- DELETE FROM aluno
+-- WHERE "idade" < 18 AND "genero" = 'M' OR "idade" < 21 AND "genero" = 'F'
