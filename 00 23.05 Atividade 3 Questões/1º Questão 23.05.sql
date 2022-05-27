@@ -1,4 +1,4 @@
--- DROP TABLE IF EXISTS livro
+-- DROP TABLE IF EXISTS livro;
 
 -- CREATE TABLE autor(
 -- 	id serial NOT NULL,
@@ -100,29 +100,46 @@
 -- 	WHERE ano > 2015;
 
 -- SELECT * FROM autor
--- 	WHERE nome LIKE 'A%'
+-- 	WHERE nome LIKE 'A%';
 
 -- SELECT * FROM autor
--- 	WHERE nome LIKE '%r%'
+-- 	WHERE nome LIKE '%r%';
 
 -- SELECT * FROM editora
--- 	WHERE localidade = 'Florianópolis' OR localidade = 'São José'
+-- 	WHERE localidade = 'Florianópolis' OR localidade = 'São José';
 
-SELECT 
-	livro.titulo,
-	livro.ano,
-	autor.nome AS "Nome do Autor"
-	FROM
-	livro
-	INNER JOIN autor ON
-	autor.id = livro.autor_id 
-UNION
-SELECT
-	editora.nome,
-	editora.localidade,
-	livro.id
-	FROM
-	livro
-	INNER JOIN editora ON
-	livro.editora_id = editora.id
+-- SELECT 
+-- 	livro.id AS "Id do Livro",
+-- 	livro.titulo AS "Título do Livro",
+-- 	livro.ano AS "Ano do Livro",
+-- 	autor.id AS "Id do Autor",
+-- 	autor.nome AS "Nome do Autor",
+-- 	editora.id AS "Id da Editora",
+-- 	editora.nome AS "Nome da Editora",
+-- 	editora.localidade AS "Local da Editora"
+-- 	FROM
+-- 	autor
+-- 	INNER JOIN livro ON
+-- 	autor.id = livro.autor_id   
+-- 	INNER JOIN editora ON
+-- 	livro.editora_id = editora.id
+-- 	WHERE localidade = 'Florianópolis'
+
+-- SELECT 
+-- 	livro.id AS "Id do Livro",
+-- 	livro.titulo AS "Título do Livro",
+-- 	livro.ano AS "Ano do Livro",
+-- 	autor.id AS "Id do Autor",
+-- 	autor.nome AS "Nome do Autor",
+-- 	editora.id AS "Id da Editora",
+-- 	editora.nome AS "Nome da Editora",
+-- 	editora.localidade AS "Local da Editora"
+-- 	FROM
+-- 	autor
+-- 	INNER JOIN livro ON
+-- 	autor.id = livro.autor_id   
+-- 	INNER JOIN editora ON
+-- 	livro.editora_id = editora.id
+-- 	WHERE ano > 2015
+	
 	

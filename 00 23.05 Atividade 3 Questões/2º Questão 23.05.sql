@@ -1,0 +1,72 @@
+-- CREATE TABLE categoria(
+-- 	id serial NOT NULL,
+-- 	nome varchar (50),
+-- 	PRIMARY KEY (id)
+-- );
+
+-- CREATE TABLE produto(
+-- 	id serial NOT NULL,
+-- 	nome varchar (50),
+-- 	preco float,
+-- 	id_categoria int,
+-- 	PRIMARY KEY (id),
+-- 	FOREIGN KEY (id_categoria) REFERENCES categoria(id)
+-- );
+
+-- INSERT INTO categoria (nome)
+-- 	VALUES
+-- 	('Cerveja'),
+-- 	('Vinho'),
+-- 	('Refrigerante'),
+-- 	('Whisky'),
+-- 	('Vodka'),
+-- 	('Cachaça'),
+-- 	('Suco'),
+-- 	('Agua'),
+-- 	('Isotonico'),
+-- 	('Leite');
+	
+-- INSERT INTO produto (nome, preco, id_categoria)
+-- 	VALUES
+-- 	('Brahma Duplo Malte', 5, 1),
+-- 	('Heineken Long Neck', 10, 1),
+-- 	('Budweiser Long Neck', 8, 1),
+-- 	('Stella Long Neck', 8, 1),
+-- 	('Malbec Vineyar', 700, 2),
+-- 	('Campo Largo', 30, 2),
+-- 	('Coca-Cola Lata', 5, 3),
+-- 	('Guaraná Lata', 5, 3),
+-- 	('Sukita Laranja Lata', 4, 3),
+-- 	('Pepsi Lata', 5, 3),
+-- 	('Coca-Cola 2 Litros', 10, 3),
+-- 	('White Horse 1 Litro', 60, 4),
+-- 	('Ballantines 12 Anos 1 Litro', 160, 4),
+-- 	('Royal Salute 1 Litro', 950, 4),
+-- 	('Natasha 1 Litro', 7, 5),
+-- 	('Orloff 1 Litro', 30, 5),
+-- 	('Smirnoff 1 Litro', 40, 5),
+-- 	('Absolut 1 Litro', 90, 5),
+-- 	('Velho Barreiro 1 Litro', 10, 6),
+-- 	('51 1 Litro', 12, 6),
+-- 	('Del Valle Uva 1 Litro', 8, 7),
+-- 	('Del Valle Pessêgo 1 Litro', 8, 7),
+-- 	('Del Valle Laranja 1 Litro', 8, 7),
+-- 	('Água sem Gás 500ml', 4, 8),
+-- 	('Água com Gás 500ml', 5, 8),
+-- 	('Água sem Gás 1 Litro', 7, 8),
+-- 	('Água com Gás 1 Litro', 10, 8),
+-- 	('Gatorade Uva 500ml', 8, 9),
+-- 	('Gatorade Frutas Vermelhas 500ml', 8, 9),
+-- 	('Leita Tirol', 3, 10);
+
+-- SELECT * FROM produto
+-- WHERE preco < 150;
+
+-- SELECT * FROM produto
+-- WHERE nome LIKE '%a%'
+
+-- SELECT * FROM produto
+-- WHERE id_categoria = 3;
+
+-- SELECT * FROM produto
+-- WHERE id_categoria = 5

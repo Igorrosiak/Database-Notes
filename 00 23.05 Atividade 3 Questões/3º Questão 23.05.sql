@@ -1,0 +1,80 @@
+-- CREATE TABLE aluno(
+-- 	id serial NOT NULL,
+-- 	nome varchar (50) NOT NULL,
+-- 	telefone varchar (30),
+-- 	PRIMARY KEY (id)
+-- );
+
+-- CREATE TABLE disciplina(
+-- 	id serial NOT NULL,
+-- 	nome varchar (30),
+-- 	PRIMARY KEY (id)
+-- );
+
+-- CREATE TABLE aluno_disciplina(
+-- 	id serial NOT NULL,
+-- 	id_aluno int,
+-- 	id_disciplina int,
+-- 	PRIMARY KEY (id),
+-- 	FOREIGN KEY (id_aluno) REFERENCES aluno (id),
+-- 	FOREIGN KEY (id_disciplina) REFERENCES disciplina (id)
+-- );
+
+-- INSERT INTO aluno (nome, telefone)
+-- 	VALUES
+-- 	('Cleiton', '48-988534212'),
+-- 	('Diego', '48-988534213'),
+-- 	('Gabriel', '48-988534214'),
+-- 	('Peterson', '48-988534215'),
+-- 	('Anna', '48-988534216'),
+-- 	('Mauricio', '48-988534217'),
+-- 	('Gabriela', '48-988534218'),
+-- 	('Ariany', '48-988534219'),
+-- 	('Camila', '48-988534210'),
+-- 	('Fred', '48-988534211'),
+-- 	('Noronha', '48-988534221'),
+-- 	('Igor', '48-988534222'),
+-- 	('Artur', '48-988534220'),
+-- 	('Bryan', '48-988534223'),
+-- 	('Gabriel', '48-988534224'),
+-- 	('Manuela', '48-988534225'),
+-- 	('Nicolas', '48-988534226'),
+-- 	('Igor', '48-988534227'),
+-- 	('Ismael', '48-988534228'),
+-- 	('Matheus', '48-988534229');
+
+-- INSERT INTO disciplina (nome)
+-- 	VALUES
+-- 	('Matemática'),
+-- 	('Natureza'),
+-- 	('Humanas'),
+-- 	('Programação'),
+-- 	('Linguagens');
+
+-- INSERT INTO aluno_disciplina (id_aluno, id_disciplina)
+-- 	VALUES
+-- 	(1, 2),
+-- 	(2, 2),
+-- 	(3, 2),
+-- 	(4, 2),
+-- 	(5, 2),
+-- 	(6, 2),
+-- 	(7, 2),
+-- 	(8, 2),
+-- 	(9, 2),
+-- 	(10, 2),
+-- 	(11, 2),
+-- 	(12, 4),
+-- 	(13, 4),
+-- 	(14, 4),
+-- 	(15, 4),
+-- 	(16, 4),
+-- 	(17, 4),
+-- 	(18, 4),
+-- 	(19, 4),
+-- 	(20, 4);
+	
+-- SELECT * FROM aluno
+-- INNER JOIN aluno_disciplina ON 
+-- aluno.id = aluno_disciplina.id_aluno 
+-- WHERE id_disciplina = 2 OR id_disciplina = 4
